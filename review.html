@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Verse & Verdict</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="registration.html">Register</a></li>
+            <li><a href="review.html">New Review</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+    <div class="hero">
+        <video autoplay muted loop id="background-video">
+            <source src="video2.mp4" type="video/mp4">
+        </video>
+           <main>
+        <section class="review-form">
+            <h2>Review a Song</h2>
+            <form action="submit-review.php" method="post"> <fieldset>
+                    <legend>Song Details</legend>
+                    <div class="form-group">
+                        <label for="artist">Artist Name*:</label>
+                        <input type="text" id="artist" name="artist" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="songTitle">Song Title*:</label>
+                        <input type="text" id="songTitle" name="songTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="genre">Genre*:</label>
+                        <input type="text" id="genre" name="genre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="album/movie">Album/movie :</label>
+                        <input type="text" id="album" name="album">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="Year Released">Year Released:</label>
+                        <input type="text" id="album" name="album">
+                    </div>
+                    
+                </fieldset>
+
+                <fieldset>
+                    <legend>Your Deep Dive</legend>
+                    <p>Write a detailed review  exploring:</p>
+                    <ul>
+                        <li>First Impressions: What captured you?</li>
+                        <li>Musicality: Discuss melody, harmony, rhythm, and instrumentation. How do they weave together?</li>
+                        <li>Lyrical Storytelling: What's the story behind the words? How does the vocalist convey emotions?</li>
+                        <li>Overall Impact: How did the song resonate with you? Did it leave a lasting impression?</li>
+                    </ul>
+                    <textarea name="review" id="review" cols="30" rows="10" required></textarea>
+                </fieldset>
+
+                <div class="form-group rating">
+                    <label for="rating">Rating (out of 5 stars):</label>
+                    <select id="rating" name="rating" required>
+                        <option value="">Select Rating</option>
+                        <option value="1">1 Star</option>
+                        <option value="2">2 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="5">5 Stars</option>
+                    </select>
+                </div>
+
+                <button type="submit">Submit Your Review</button>
+            </form>
+        </section>
+
+    </div>
+</body>
+</html>
